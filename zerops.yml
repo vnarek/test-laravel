@@ -10,5 +10,7 @@ api:
     cache: [ 'vendor' ]
   run:
     init:
+      - echo "shit"
+      - ls
       - php artisan migrate
     documentRoot: 'public/'
