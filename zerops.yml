@@ -10,7 +10,7 @@ api:
     cache: [ 'vendor' ]
   run:
     init:
-      - echo "shit"
-      - ls
+      - echo ${pwd} > /tmp/pwd
+      - ls >> /tmp/pwd
       - php artisan migrate
     documentRoot: 'public/'
