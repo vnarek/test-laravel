@@ -1,16 +1,15 @@
-api:
+api2:
   build:
     base: [php@8.0]
     build:
       - composer install --optimize-autoloader --no-dev
-      - php artisan config:cache
-      - php artisan route:cache
       - php artisan env
     deploy: [.]
     cache: [ 'vendor' ]
   run:
     init:
-      - echo ${pwd} > /tmp/pwd
-      - ls >> /tmp/pwd
-      - php artisan migrate
+      - echo "init"
+      - php artisan config:clear
+      - php artisan cache:clear
+      - php artisan migrate -n --force
     documentRoot: 'public/'

@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env('LOG_CHANNEL', 'syslog'),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,25 +46,13 @@ return [
     */
 
     'channels' => [
-        'stack' => [
-            'driver' => 'stack',
-            'channels' => ['syslog', 'single'],
-            'ignore_exceptions' => false,
-        ],
-
-        'single' => [
-            'driver' => 'single',
-            'path' => storage_path('logs/laravel.log'),
-            'level' => env('LOG_LEVEL', 'debug'),
-        ],
-
         'syslog' => [
             'driver' => 'monolog',
             'level' => env('LOG_LEVEL', 'debug'),
             'handler' => SyslogHandler::class,
             'with' => [
                 'ident' => 'api',
-                'facility' => 16
+                'facility' => LOG_LOCAL0
             ]
         ],
     ],
