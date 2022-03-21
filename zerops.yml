@@ -1,4 +1,4 @@
-api2:
+api:
   build:
     base: [php@8.0]
     build:
