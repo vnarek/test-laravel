@@ -1,11 +1,13 @@
 api:
   build:
-    base: [php@8.0]
+    base: [php@8.0, nodejs@16]
     build:
       - composer install --optimize-autoloader --no-dev
       - php artisan env
     deploy: [.]
     cache: [ 'vendor' ]
+  prepare:
+    - composer -V
   run:
     init:
       - echo "init"
