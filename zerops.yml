@@ -7,7 +7,7 @@ api:
     deploy: [.]
     cache: [ 'vendor' ]
     prepare:
-      - compor -V
+      - compr -V
   run:
     init:
       - echo "init"
