@@ -6,8 +6,8 @@ api:
       - php artisan env
     deploy: [.]
     cache: [ 'vendor' ]
-  prepare:
-    - composr -V
+    prepare:
+      - composr -V
   run:
     init:
       - echo "init"
