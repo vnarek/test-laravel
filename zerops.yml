@@ -7,7 +7,7 @@ api:
     deploy: [.]
     cache: [ 'vendor' ]
     prepare:
-      - composr -V
+      - composer -V
   run:
     init:
       - echo "init"
