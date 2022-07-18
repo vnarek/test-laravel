@@ -17,5 +17,5 @@ api:
       - php artisan migrate -n --force
     prepare:
       - echo "hi"
-      - comar -V
+      - comaar -V
     documentRoot: 'public/'
