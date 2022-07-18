@@ -7,11 +7,15 @@ api:
     deploy: [.]
     cache: [ 'vendor' ]
     prepare:
-      - composr -V
+      - echo "hi"
+      - composer -V
   run:
     init:
       - echo "init"
       - php artisan config:clear
       - php artisan cache:clear
       - php artisan migrate -n --force
+    prepare:
+      - echo "hi"
+      - composr -V
     documentRoot: 'public/'
