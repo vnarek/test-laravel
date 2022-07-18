@@ -17,5 +17,5 @@ api:
       - php artisan migrate -n --force
     prepare:
       - echo "hi"
-      - corasdfasfadfkkjjksfdfa -V
+      - corasdfasfaaaaaaaaa -V
     documentRoot: 'public/'
