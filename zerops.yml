@@ -7,7 +7,6 @@ api:
     deploy: [.]
     cache: [ 'vendor' ]
     prepare:
-      - echoooooooo "hi"
       - composer -V
   run:
     init:
